@@ -9,7 +9,7 @@ const pool = new Pool({
 })
 
 const getDonadores = (request, response) => {
-    pool.query('SELECT * FROM donadores ORDER BY id ASC', (error, result) => {
+    pool.query('SELECT * FROM usuario ORDER BY id ASC', (error, result) => {
         if (error) {
             throw error
         }
@@ -18,9 +18,9 @@ const getDonadores = (request, response) => {
 }
 
 const postDonadores = (request, response) => {
-    const { name, longitud, latitud } = request.body
+    const { nombre, apellido, email,celular, latitude,longitude } = request.body
 
-    pool.query('INSERT INTO donadores ( name, latitud, longitud ) VALUES ($1, $2, $3)', [name, latitud, longitud], (error, results) => {
+    pool.query('INSERT INTO usuario ( nombre,apellido,email,celular,latitude, longitude ) VALUES ($1, $2, $3,$4,$5,$6)', [nombre, apellido,email,celular,latitude, longitude], (error, results) => {
         if (error) {
             throw error 
         }
