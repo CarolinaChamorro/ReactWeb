@@ -13,6 +13,7 @@ const Dropdown = ({isOpen,toggle}) => {
             <Link className='p-4' to="/mantenimiento">Mantenimiento</Link>
             <Link className='p-4' to="/entrega">Entrega</Link> 
             <Link className='p-4' to="/map">Mapa</Link> 
+            <Link className='p-4' to="/lista">Lista de donadores</Link>
         </div>
     )
 }

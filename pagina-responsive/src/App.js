@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import { Switch,Route } from 'react-router-dom';
 import Home from './pages';
 import Mantenimiento from './pages/mantenimiento';
+import Lista from './components/Lista';
 import Entregar from './pages/entregar';
 import Eliminar from './pages/eliminar';
 import Funcional from './pages/formfun';
@@ -47,6 +48,7 @@ function App() {
        <Route path="/recepcion" component={Recepcion} />
        <Route path="/entrega" component={Entregar} />
        <Route path="/map" component={Mapa}/>
+       <Route path="/lista" component={Lista}/>
      </Switch>
      <Footer />
     </>
